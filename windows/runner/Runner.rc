@@ -92,7 +92,7 @@ BEGIN
             VALUE "CompanyName", "com.example" "\0"
             VALUE "FileDescription", "here2there_kids" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "here2there_kids" "\0"
+            VALUE "InternalName", "com.csdev.here2therekids" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
             VALUE "OriginalFilename", "here2there_kids.exe" "\0"
             VALUE "ProductName", "here2there_kids" "\0"

@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:here2there_kids/components/sprite.dart';
+
+class Star1 extends StatelessWidget {
+  final double height;
+  final double width;
+  const Star1({super.key, required this.height, required this.width});
+
+  @override
+  Widget build(BuildContext context) {
+    return Sprite(
+      spriteRoute: 'assets/star_1.png',
+      top: height * 0.28,
+      left: width * 0.18,
+      height: height * 0.14,
+    );
+  }
+}
