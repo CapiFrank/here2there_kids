@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:here2there_kids/components/sprite.dart';
 import 'package:here2there_kids/screens/travel/widgets/arrival_celebration.dart';
 import 'package:here2there_kids/sprites/bush_1.dart';
@@ -85,6 +86,23 @@ class _TravelSceneState extends State<TravelScene>
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      await SystemChrome.setPreferredOrientations([
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
+      ]);
+    });
+  }
+
+  @override
+  void dispose() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+    super.dispose();
   }
 
   @override
@@ -102,7 +120,6 @@ class _TravelSceneState extends State<TravelScene>
 
           // Posición horizontal en píxeles según porcentaje
           final vehicleLeft = locationService.progress * (width - vehicleWidth);
-          // final vehicleLeft = (width - vehicleWidth) * 0.85;
 
           // Posición vertical relativa desde abajo (ejemplo 8% del alto)
           final vehicleBottom = height * 0.14;

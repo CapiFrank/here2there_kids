@@ -7,10 +7,6 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.landscapeLeft,
-    DeviceOrientation.landscapeRight,
-  ]);
   await SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
   runApp(
     ChangeNotifierProvider(
@@ -31,7 +27,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Here2There Kids',
       scaffoldMessengerKey: messengerKey,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(primarySwatch: Colors.blue, scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
