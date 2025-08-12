@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:here2there_kids/utils/error_handler.dart';
 import 'package:here2there_kids/utils/nearby_searcher.dart';
 
 class PlaceInfoModal extends StatelessWidget {
